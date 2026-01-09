@@ -100,7 +100,7 @@ section{
 .banner{
     min-height: 100vh;
     width: 100%;
-    background-image: url("../IMAGES/ABOUTBack.jpg");
+    background-image: url("ABOUTBack.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
@@ -282,22 +282,22 @@ section{
 
 .programs .boxContainer .box:nth-child(1) .cardImage,
 .programs .boxContainer .box:nth-child(1) .cardImage::after{
-background-image: url(../IMAGES/IthembaHomeEducation.jpg);     
+background-image: url(IthembaHomeEducation.jpg);     
 }
 
 .programs .boxContainer .box:nth-child(2) .cardImage,
 .programs .boxContainer .box:nth-child(2) .cardImage::after{
-background-image: url(../IMAGES/IthembaHomeEssentials.jpg);     
+background-image: url(IthembaHomeEssentials.jpg);     
 }
 
 .programs .boxContainer .box:nth-child(3) .cardImage,
 .programs .boxContainer .box:nth-child(3) .cardImage::after{
-background-image: url(../IMAGES/IthembaHomeCounselling.jpg);     
+background-image: url(IthembaHomeCounselling.jpg);     
 }
 
 .programs .boxContainer .box:nth-child(4) .cardImage,
 .programs .boxContainer .box:nth-child(4) .cardImage::after{
-background-image: url(../IMAGES/IthembaHomeChildrendrive.jpg);     
+background-image: url(IthembaHomeChildrendrive.jpg);     
 }
 
 .programs .boxContainer .box:hover .cardImage::after{
@@ -767,4 +767,5 @@ form input, form textarea{
     width: 100%;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
 }
