@@ -1,771 +1,365 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-:root{
-        --themeRed:#e43a47;
-        --gray:#efefef;
+
+:root {
+    --themeRed: #e43a47;
+    --gray: #efefef;
 }
 
-*{
+/* ================= GLOBAL RESET ================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins;
-    
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-button, 
-body { 
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+    background: #fff;
+    color: #444;
 }
 
-header{
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        position: fixed;
-        z-index: 2;
+/* ================= LAYOUT ================= */
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
 }
 
+.fullContainer {
+    width: 100%;
+}
 
+section {
+    padding: 80px 0;
+}
 
-header .container{
+/* ================= HEADER ================= */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header .container .logo {
-    padding: 2% 0;
-    height: 75px;
+.logo img {
+    max-height: 60px;
 }
 
-header .container .logo img {
-    height: 500%;
+/* ================= NAVIGATION ================= */
+nav ul {
+    list-style: none;
 }
 
-header nav ul{
-   list-style-type: none; 
-}
-
-header nav ul li {
+nav ul li {
     display: inline-block;
 }
 
-header nav ul li a {
-    display: inline-block;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
     height: 75px;
     line-height: 75px;
-    padding: 0 15px;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 22px;
-    color: white;
-    transition: 0.3s;
-
-}
-
-header nav ul li a:hover{
-    background-color: var(--themeRed);
-}
-
-p {
-    font-size: 14px;
-    line-height: 26px;
-}
-
-.container{
-    width: 1140px;
-    margin: auto;
-}
-
-.fullContainer{
-    width: 100%;
-}
-
-.overview{
-    width: 1140px;
-    margin: auto;
-    position: relative;
-}
-
-
-section{
-    padding: 100px 0;
-    position: relative;
-}
-
-.banner{
-    min-height: 100vh;
-    width: 100%;
-    background-image: url("ABOUTBack.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.banner h1{
-    margin-top: 230px;
-    display: inline-block; 
-    font-size: 3.5rem;
-    color: #fff;
-    text-shadow: 0 0 2px #000;
-    width:50%;
-    line-height: 4.2rem;
-    font-weight: 100;
-}
-
-.banner h1 span{
-       background-color: var(--themeRed);
-       display: inline-block;
-       line-height: 3.5rem;
-       padding: 0 15px;
-       font-weight: 600;
-       border-radius: 5px;
-}
-
-.banner p{
-       color: #fff;
-       width: 50%;
-       text-shadow: 0 0 2px #000;
-       margin-top: 10px;
-}
-
-.banner button{
-       background-color: var(--themeRed);
-       border: 0;
-       outline: none;
-       color: #fff;
-       padding: 10px 15px;
-       margin-top: 20px;
-       font-size: 13px;
-       border-radius: 3px;
-       font-weight: 600;
-}
-
-form{
-    margin-bottom: 150px;
-}
-
-#aboutSection .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 50px;
-    position: relative;
-    height: 245px;
-}
-
-#aboutSection .cards > div {
-    width: 350px;
-    background-color: var(--gray);
-    padding: 35px;
-    color: #444;
-    text-align: center;
-    border-radius: 5px;
-    height: 215px;
-    border: 1px solid #ccc;
-    transition: 0.4s;
-}
-
-#aboutSection .cards > div:hover{
-        width: 400px;
-        margin-top: -20px;
-        border-color: var(--themeRed);
-        padding: 55px;
-        height: auto;
-}
-
-#aboutSection .cards > div .title {
-    font-size: 18px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-
-#aboutSection .cards > div p{
-    font-size: 14px;
-    margin-top: 15px;
-}
-
-#aboutSection .cards > div button{
-    border: 1px solid var(--themeRed);
-    outline: none;
-    padding: 7px 15 px;
-    margin-top: 15px;
-    font-size: 12px;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#aboutSection .cards > div:hover button{
-        background-color: var(--themeRed);
-        color: #fff;
-
-}
-
-.sectionTitle{
-    width: 300px;
-    border-bottom: 3px solid var(--themeRed);
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 200;
-    margin: 0 auto 50px;
-    position: relative;
-    padding: 10px 0;
-    text-transform: uppercase;
-}
-
-.sectionTitle::after{
     display: inline-block;
-    content: "";
-    height: 15px;
-    width: 15px;
-    background-color:var(--themeRed);
-    position: absolute;
-    left: calc(50% - 10px);
-    top:calc(75% - 7px);
-    transform: rotate(45deg) translate(50%, 50%);
-    border: 3px solid #fff;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
-section{
-    padding: 100px 0;
-    position: relative;
+nav ul li a:hover {
+    background: var(--themeRed);
 }
 
-.programs{
-    background-color: #e2e2e2;
-
+/* ================= BANNER ================= */
+.banner {
+    min-height: 100vh;
+    background: url("ABOUTBack.jpg") center/cover fixed;
+    display: flex;
+    align-items: center;
 }
 
-.programs .boxContainer{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 50px;
-}
-
-.programs .boxContainer .box{
-    background-color: #fff;
-    text-align: center;
-    padding-bottom: 25px;
-    border-radius: 5px;
-    box-shadow: 0 0 3px 0 #c5c5c5;
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.programs .boxContainer .box .cardImage{
-    width: 100%;
-    height: 300px;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px 5px 0 0;
-}
-
-.programs .boxContainer .box .cardImage::after{
-    width: 100%;
-    height:100%;
-    background-position: center;
-    background-size: cover;
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    filter: grayscale(100%);
-    transition: 0.4s;
-}
-
-.programs .boxContainer .box:nth-child(1) .cardImage,
-.programs .boxContainer .box:nth-child(1) .cardImage::after{
-background-image: url(IthembaHomeEducation.jpg);     
-}
-
-.programs .boxContainer .box:nth-child(2) .cardImage,
-.programs .boxContainer .box:nth-child(2) .cardImage::after{
-background-image: url(IthembaHomeEssentials.jpg);     
-}
-
-.programs .boxContainer .box:nth-child(3) .cardImage,
-.programs .boxContainer .box:nth-child(3) .cardImage::after{
-background-image: url(IthembaHomeCounselling.jpg);     
-}
-
-.programs .boxContainer .box:nth-child(4) .cardImage,
-.programs .boxContainer .box:nth-child(4) .cardImage::after{
-background-image: url(IthembaHomeChildrendrive.jpg);     
-}
-
-.programs .boxContainer .box:hover .cardImage::after{
-    top: 100%;
-}
-
-.programs .boxContainer .box .programTitle{
-    font-size: 16px;
-    margin-top: 15px;
-    font-weight: 600;
-    color: #444;
-}
-
-.programs .boxContainer .box .donationCount{
-    font-size: 13px;
-    font-weight: 600;
-    color: #444;
-    margin-top: 10px;
-}
-
-.programs .boxContainer .box .donationCount span{
-    color: var(--themeRed);
-}
-
-.programs .boxContainer .box button{
-    position: absolute;
-    left: 50%;
-    background-color: var(--themeRed);
+.banner h1 {
+    font-size: 3.2rem;
+    font-weight: 200;
     color: #fff;
-    transform: translate(-50%);
-    bottom: -15px;
-    border-radius: 60px;
-    padding: 7px 15px;
-    border: 0;
-    outline: none;
+    width: 60%;
+    line-height: 4rem;
+    text-shadow: 0 0 2px #000;
+}
+
+.banner h1 span {
+    background: var(--themeRed);
+    padding: 0 15px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.banner p {
+    color: #fff;
+    width: 60%;
+    margin-top: 15px;
+}
+
+.banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: var(--themeRed);
+    color: #fff;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-footer{
-    background-color: #181818;
+/* ================= FOOTER ================= */
+footer {
+    background: #181818;
     color: #7f7f7f;
     padding: 50px 0;
-    font-size: 14px;
 }
 
-.aboutfooter {
-    margin-top: 750px;
-}
-
-footer .container{
+footer .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
 }
 
-footer .title{
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 2px solid;
-    margin-bottom: 30px;
-    padding: 0 0 5px 0;
+footer .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #7f7f7f;
+    padding-bottom: 5px;
 }
 
-footer p{
-    margin-bottom: 10px;
-}
-
-footer .linksContainer ul{
-    list-style-type: none;
-}
-
-footer .linksContainer ul li a{
-    text-decoration: none;
+footer a {
     color: #7f7f7f;
-    margin-bottom: 10px;
-    display: inline-block;
+    text-decoration: none;
 }
 
-footer .newsLetterContainer img{
-    height: 40px;
-    margin-bottom: 11px;
-}
-
-footer .newsLetterContainer input{
-    background-color: transparent;
-    border: 1px solid #7f7f7f;
-    outline: none;
-    padding: 10px 15px;
-    width: 100%;
-    margin-top: 10px;
-    color: #ccc;
-    border-radius: 30px;
-}
-
-#news{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 85px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.newsHeading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.newsHeading span{
-    color: #f33c3c;
-}
-
-.newsHeading h3{
-    font-size: 38px;
-    color: #2b2b2b;
-    font-weight: 600;
-}
-
-.newsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-
-.newsBox{
-    width: 350px;
-    background-color: #ffffff;
-    border: 1px solid #ececec;
-    margin: 20px;
-}
-
-.newsImg{
-    width: 100%;
-    height: auto;
-}
-
-.newsImg img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.newsText{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.newsText span{ 
-    color: #f33c3c;
-    font-size: 0.9rem;
-}
-
-.newsText .newsTitle{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #272727;
-}
-
-.newsText .newsTitle:hover{
-    color: #f33c3c;
-    transition: all ease 0.3s;
-}
-
-.newsText p{
-    color: #9b9b9b;
-    font-size: 0.9rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
-}
-
-.newsText a{
-    color: #0f0f0f;
-}
-
-.newsText a:hover{
+footer a:hover {
     color: var(--themeRed);
-    transition: all ease 0.3s;
 }
 
-
-
-.map_main {
-    width: 100%;
-    float: left;
-    padding-top: 80px;
-}
-
-form{
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    padding: 2vw 4vw;
-    width: 90%;
-    max-width: 600px;
+iframe {
+    max-width: 100%;
     border-radius: 10px;
 }
 
-form h3{
-    color: #555;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-form input, form textarea{
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: #f5f5f5;
-    font-size: 16px;
-}
-
-.map_main {
-    position: absolute;
-    top: 215px; 
-    right: 100px; 
-    width: 300px; 
-    height: 550px; 
-}
-
-.contact_taital{
-    text-align: center;
-}
-
-@media(max-width:1250px){
-    .newsBox{
-        width: 300px;
-    }
-}
-
-@media(max-width:110px){
-    .newsBox{
-        width: 70%;
-    }
-}
-
-@media(max-width:550px){
-    .newsBox{
-        margin: 20px 10px;
-        width: 100%;
-    }
-    #news{
-        padding: 20px;
-    }
-}
-
-/*part 2 improvements */
-@media screen and (max-width: 1140px){
-    .container{
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    #homeSection .fullContainer .banner .header .div .container div .logo a img{
-        width: 100%;
-        padding: 0 15px;
-    }
-}
-
-@media screen and (max-width: 1080px){
-    .banner h1{
-        margin-top: 200px;
-    }
-    #aboutSection .cards {
-        justify-content: space-around;
-        height: auto;
-    }
-
-    #aboutSection .cards > div {
-        margin: 10px 0;
-    }
-}
-
-
-
-@media screen and (max-width: 1024px) {
-    .banner{
-        background-position: 45%;
-    }
-
-    .banner h1{
-        font-size: 2.5rem;
-    }
-
-    .programs .boxContainer{
-        grid-template-columns: repeat(2,1fr);
-    }
-    .IthembaHomelogo{
-        width: 100px;
-        max-height: 60px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    header nav {
+/* ================= MOBILE MENU ================= */
+@media (max-width: 768px) {
+    nav {
         position: relative;
+        width: 32px;
+        height: 32px;
         border: 2px solid #fff;
-        height: 30px;
-        width: 30px;
-        margin-top: 20px;
         border-radius: 5px;
+        cursor: pointer;
     }
 
-    header nav::after{
-        top: 17px;
-    }
-    header nav::before{
-        top: 7px;
-    }
-    header nav::after, header nav::before{
+    nav::before,
+    nav::after {
         content: "";
+        position: absolute;
+        left: 6px;
+        width: 18px;
         height: 2px;
-        width: 17px;
-        background-color: #fff;
-        display: block;
-        position: absolute;
-        left: 5px;
+        background: #fff;
     }
 
-    header nav ul{
+    nav::before { top: 9px; }
+    nav::after { top: 17px; }
+
+    nav ul {
         position: absolute;
-        right: -400px;
-        top: 53px;
-        transition: 0.5s;
+        top: 50px;
+        right: -320px;
+        background: rgba(0,0,0,0.8);
+        transition: 0.4s;
     }
 
-    header nav:hover ul {
+    nav:hover ul,
+    nav:focus-within ul {
         right: 0;
     }
-    header nav ul li {
+
+    nav ul li {
         display: block;
     }
 
-    header nav ul li a{
+    nav ul li a {
         width: 300px;
-        background-color: rgba(0, 0, 0, 0.6);   
-    }
-    .banner{
-        background-position-x: 65%;
-    }
-    .banner p{
-        font-size: 14px;
-    }
-
-    .banner p, .banner h1{
-        width: 70%;
-    }
-    #aboutSection .cards > div:hover{
-        width: 350px;
-    }
-    .IthembaHomelogo{
-        width: 100px;
-        max-height: 60px;
+        line-height: 50px;
     }
 }
 
-@media screen and (max-width: 425px){
-    .banner h1{
-        margin-top: 150px;
-        font-size: 2rem;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .banner h1 {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner h1,
+    .banner p {
+        width: 100%;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem;
         line-height: 3rem;
     }
-    .banner button {
-        margin-bottom: 10px;
-    }
-    #aboutSection p{
-        text-align: justify;
-    }
-    #aboutSection .cards > div:hover{
-        width: 400px;
-        margin-top: 10px;
-        padding: 35px;
-    }
-    .programs .boxContainer{
-        grid-template-columns: 1fr;
-    }
+
     footer .container {
         grid-template-columns: 1fr;
+        text-align: center;
     }
-
-    .IthembaHomelogo{
-        width: 100px;
-        max-height: 60px;
-    }
-
 }
 
-@media screen and (max-width: 320px){
-    .banner h1{
+@media (max-width: 480px) {
+    .banner h1 {
+        font-size: 2rem;
         margin-top: 100px;
     }
+}
 
-    .IthembaHomelogo{
-        width: 100px;
-        max-height: 60px;
+/* ================= ABOUT PAGE ================= */
+
+/* Banner */
+.bannerAbout {
+    min-height: 60vh;
+    background: url("ABOUTBack.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+/* About section spacing */
+#aboutSection {
+    padding-top: 120px;
+}
+
+/* Section titles */
+.sectionTitle {
+    max-width: 320px;
+    margin: 0 auto 40px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--themeRed);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.sectionTitle::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--themeRed);
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%) rotate(45deg);
+    border: 3px solid #fff;
+}
+
+/* Paragraphs */
+#aboutSection p {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.cards > div {
+    background: var(--gray);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.cards .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.cards button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: transparent;
+    border: 2px solid var(--themeRed);
+    color: var(--themeRed);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cards button:hover {
+    background: var(--themeRed);
+    color: #fff;
+}
+
+/* ================= ABOUT FOOTER FIX ================= */
+.aboutfooter {
+    margin-top: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #aboutSection p {
+        text-align: justify;
+        padding: 0 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionTitle {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerAbout {
+        min-height: 50vh;
+    }
+
+    .sectionTitle {
+        font-size: 1.4rem;
     }
 }
 
 
-#backToTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-#myModal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#paymentFormOverlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-#paymentForm {
-    background: #fff;
-    padding: 20px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-}
